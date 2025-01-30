@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Currency Converter</title>
+<style>
+  body{
+    font-family:Arial, sans-serif;
+    margin: 20px;
+    color: black;
+    background-color: #407A52;
+    text-align: center;
+
+  }
+  .container{
+    max-width: 300px;
+    margin: auto;
+    background-color:#6B9362;
+  }
+  label, input, button {
+    display: block;
+    margin: auto;
+    width: 200px;
+}
+  button{
+    padding: 5px;
+    margin-bottom: 5px;
+  }
+</style>
+</head>
+    <div class="container">
+      <h1>CURRENCY CONVERTER</h1>
+      <img src="image1.jpg" width="300" height="auto">
+      <label for="number1">Enter Amount of Pesos:</label>
+      <input type="number" id="number1"><br>
+        <button on onclick="Dollar()">Dollar</button>
+        <button on onclick="Yen()">Yen</button>
+        <button on onclick="Euro()">Euro</button>
+        <button on onclick="Pound()">Pound</button>
+        <button on onclick="Bhat()">Baht</button>
+    <div id="result"></div>
+  </div>
+     <script>
+      function Dollar() {
+      const num1= parseFloat(document.getElementById('number1').value);
+      const ResultSum = num1 * 0.017;
+
+      document.getElementById('result').textContent=`The conversion is:${ResultSum}`;
+      }
+
+      function Yen() {
+      const num1= parseFloat(document.getElementById('number1').value);
+      const ResultSum = num1 * 2.65;
+
+      document.getElementById('result').textContent=`The conversion is:${ResultSum}`;
+      }
+
+      function Euro() {
+      const num1= parseFloat(document.getElementById('number1').value);
+      const ResultSum = num1 * 0.016;
+
+      document.getElementById('result').textContent=`The conversion is: ${ResultSum}`;
+      }
+
+      function Pound() {
+      const num1= parseFloat(document.getElementById('number1').value);
+      const ResultSum = num1 * 0.014;
+
+      document.getElementById('result').textContent=`The conversion is: ${ResultSum}`;
+      }
+
+      function Bhat() {
+      const num1= parseFloat(document.getElementById('number1').value);
+      const ResultSum = num1 * 0.58;
+
+      document.getElementById('result').textContent=`The conversion is: ${ResultSum}`;
+      }
+     </script>
+<body>
+</body>
+</html>
+
